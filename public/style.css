@@ -1,13 +1,17 @@
-h1 {
-text-align: center;
-color: blue;
-}
-
-div{
+* {
     text-align: center;
     font-size: 5mm;
     background-color: rgb(39, 39, 39);
     color: orange;
     height: 10vh;
     width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+div {
+    height: 50%;
 }
