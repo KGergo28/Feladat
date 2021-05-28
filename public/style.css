@@ -3,15 +3,38 @@
     font-size: 5mm;
     background-color: rgb(39, 39, 39);
     color: orange;
-    height: 10vh;
-    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
+html, body {
+	width: 100%;
+    height: 100%;
+}
+
+form p {
+    font-size: 5vh;
     text-align: center;
-    color: blue;
+    color: orange;
+    padding-top:2vh;
+    padding-bottom:2vh;
 }
 
-div {
-    height: 50%;
+form label {
+    font-size: 2.5vh;
+}
+
+form input{
+    margin: 2vh;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+
+form button{
+    height: 100px;
+    width: 200px;
 }
