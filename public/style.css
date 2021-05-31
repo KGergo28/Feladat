@@ -35,6 +35,7 @@ input[type="radio"] {
 }
 
 form button{
-    height: 100px;
+    margin-top: 25px;
+    height: 75px;
     width: 200px;
 }

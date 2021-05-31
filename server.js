@@ -4,4 +4,11 @@ const app = express();
 
 app.use(express.static('public'));
 
+app.use('/add_szav', express.urlencoded());
+app.post('/add_szav', function(request, response) {
+	console.log(request.body);
+	
+	response.redirect('/');
+});
+
 app.listen(9000);
