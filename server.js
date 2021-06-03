@@ -18,12 +18,20 @@ const model = mongoose.model('Opciok', schema, 'Opciok');
 app.use(express.urlencoded());
 app.post('/add_szav', function(request, response) {
 	console.log(request.body);
-	
-	new model ({
-		nev: request.body.hawaii,
-		szavazatok: 1
-	}).save();
+	model.findOne({ nev: request.body.hawaii}, function(err, doc) {
+	if (doc) {
+		console.log(request.body.hawaii + ' már létezik');
 
+		doc.szavazatok++;
+		doc.save();
+	} else {
+		console.log(request.body.hawaii + ' még nem létezik');
+		new model ({
+			nev: request.body.hawaii,
+			szavazatok: 1
+		}).save();
+	}
+	});
 	response.redirect('/');
 });
 
