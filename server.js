@@ -32,7 +32,13 @@ app.post('/add_szav', function(request, response) {
 		}).save();
 	}
 	});
-	response.redirect('/');
+	response.redirect('/stat.html');
+});
+
+app.get('/stat', function(req, res){
+	model.find({}, function(err, doc){
+		res.send(doc);
+	});
 });
 
 app.listen(9000);
